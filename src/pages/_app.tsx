@@ -1,6 +1,8 @@
 import { type AppType } from "next/app";
 import { type Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
+import {httpBatchLink} from '@trpc/client/links/httpBatchLink'
+import { wsLink, createWSClient } from "@trpc/client/links/wsLink";
 
 import { trpc } from "../utils/trpc";
 
